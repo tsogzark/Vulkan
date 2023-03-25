@@ -113,6 +113,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 file(GLOB SOURCE *.cpp )
 
 # Build all examples
+set(CMAKE_EXE_LINKER_FLAGS  "-static")
 function(buildExamples)
 	foreach(EXAMPLE ${EXAMPLES})
 		buildExample(${EXAMPLE})
